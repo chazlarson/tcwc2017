@@ -1,3 +1,5 @@
+# rubocop:disable Metrics/BlockLength
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -83,4 +85,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # SparkPost settings
+  config.action_mailer.default_url_options = { host: 'intense-savannah-85543.heroku.com' }
+  config.action_mailer.smtp_settings = {
+    port: ENV['SPARKPOST_SMTP_PORT'],
+    address: ENV['SPARKPOST_SMTP_HOST'],
+    user_name: ENV['SPARKPOST_SMTP_USERNAME'],
+    password: ENV['SPARKPOST_SMTP_PASSWORD'],
+    domain: 'intense-savannah-85543.heroku.com',
+    authentication: :plain
+  }
+  config.action_mailer.delivery_method = :smtp
 end
+
+# rubocop:enable Metrics/BlockLength
