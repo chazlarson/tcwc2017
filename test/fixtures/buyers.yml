@@ -1,0 +1,41 @@
+# == Schema Information
+#
+# Table name: buyers
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  bid_number :string
+#  addr1      :string
+#  addr2      :string
+#  city       :string
+#  state      :string
+#  zip        :string
+#  phone      :string
+#  email      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bid_number: MyString
+  addr1: MyString
+  addr2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  email: MyString
+
+two:
+  name: MyString
+  bid_number: MyString
+  addr1: MyString
+  addr2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  email: MyString

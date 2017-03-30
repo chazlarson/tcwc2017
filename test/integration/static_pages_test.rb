@@ -6,15 +6,15 @@ class StaticPagesTest < ActionDispatch::IntegrationTest
     assert page.has_css?('title', text: full_title(''), visible: false)
     assert page.has_css?('h1', text: 'Home')
     assert page.has_text?('Welcome to TCWC Auction')
-    assert page.has_css?('small', text: 'TCWC Auction by Somebody')
+    assert page.has_css?('small', text: 'TCWC Auction by Chaz Larson; based on Generic App by Jason Hsu')
   end
 
   test 'about page has expected content' do
     visit about_path
     assert page.has_css?('title', text: full_title('About'), visible: false)
     assert page.has_css?('h1', text: 'About')
-    assert page.has_text?('Describe your site here.')
-    assert page.has_css?('small', text: 'TCWC Auction by Somebody')
+    assert page.has_text?("This site manages the Twin Cities Women's Choir's annual Divas and Desserts Silent Auction.")
+    assert page.has_css?('small', text: 'TCWC Auction by Chaz Larson; based on Generic App by Jason Hsu')
   end
 
   test 'contact page has expected content' do
@@ -22,7 +22,7 @@ class StaticPagesTest < ActionDispatch::IntegrationTest
     assert page.has_css?('title', text: full_title('Contact'), visible: false)
     assert page.has_css?('h1', text: 'Contact')
     assert page.has_text?('chaz@chazlarson.com')
-    assert page.has_css?('small', text: 'TCWC Auction by Somebody')
+    assert page.has_css?('small', text: 'TCWC Auction by Chaz Larson; based on Generic App by Jason Hsu')
   end
 
   test 'home page provides access to the about page' do
