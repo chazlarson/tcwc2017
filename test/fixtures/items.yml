@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: items
+#
+#  id          :integer          not null, primary key
+#  item_num    :string
+#  item        :string
+#  minbid      :decimal(, )
+#  value       :decimal(, )
+#  sale        :decimal(, )
+#  description :text
+#  notes       :text
+#  night_id    :integer
+#  location_id :integer
+#  category_id :integer
+#  package_id  :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_num: MyString
+  item: MyString
+  minbid: 9.99
+  value: 9.99
+  sale: 9.99
+  description: MyText
+  notes: MyText
+  night: one
+  location: one
+  category: one
+  package: one
+
+two:
+  item_num: MyString
+  item: MyString
+  minbid: 9.99
+  value: 9.99
+  sale: 9.99
+  description: MyText
+  notes: MyText
+  night: two
+  location: two
+  category: two
+  package: two
